@@ -17,7 +17,6 @@ function imageLoaded() {
   if (imagesLoaded === totalImages) {
     ready = true;
     loader.hidden = true;
-    console.log('ready =', ready);
   }
 }
 
@@ -32,7 +31,6 @@ function setAttributes(element, attributes) {
 function displayPhotos() {
   imagesLoaded = 0;
   totalImages = photosArray.length;
-  console.log('total images', totalImages);
   // Run function for each onject in photosArray
   photosArray.forEach((photo) => {
     // Create <a> to link to Unsplash
