@@ -16,6 +16,7 @@ function imageLoaded() {
   imagesLoaded++;
   if (imagesLoaded === totalImages) {
     ready = true;
+    loader.hidden = true;
     console.log('ready =', ready);
   }
 }
@@ -73,7 +74,7 @@ async function getPhotos() {
 
 // Check to see if scrolling near bottom of page, Load More Photos... adding event listener
 window.addEventListener('scroll', () => {
-  if (window.innerHeight + window.scrllY >= document.body.offsetHeight - 1000 && ready) {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 && ready) {
     ready = false
     getPhotos();
   }
