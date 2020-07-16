@@ -29,7 +29,7 @@ function setAttributes(element, attributes) {
 
 //  Create Elements For Links & Photos, Add to DOM
 function displayPhotos() {
-
+  imagesLoaded = 0;
   totalImages = photosArray.length;
   console.log('total images', totalImages);
   // Run function for each onject in photosArray
